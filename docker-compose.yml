@@ -1,5 +1,7 @@
 version: '3.3'
 services:
+ web:
+  image: nginx
  databases:
    image: mysql
    ports:
@@ -7,5 +9,4 @@ services:
    environment:
     - MYSQL_ROOT_PASSWORD=admin
     - MYSQL_DATABASE=demodb
- web:
-  image: nginx
+
