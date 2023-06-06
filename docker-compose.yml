@@ -3,13 +3,12 @@ services:
  web:
   image: nginx
   container_name: webserver
-    restart: unless-stopped
-    ports:
-      - 80:80
-      - 443:443
-    volumes:
-      - /home/ubuntu/rstudio_docker/nginx.conf:/etc/nginx/nginx.conf
-      - /home/ubuntu/ssl:/ssl/
+  ports:
+   - 80:80
+   - 443:443
+  volumes:
+   - /home/ubuntu/rstudio_docker/nginx.conf:/etc/nginx/nginx.conf
+   - /home/ubuntu/ssl:/ssl/
  databases:
    image: mysql
    ports:
